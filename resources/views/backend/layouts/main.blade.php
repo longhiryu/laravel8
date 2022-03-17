@@ -38,8 +38,13 @@
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="#" class="nav-link">Contact</a>
                 </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link">{{ trans('phrases.hello') }}</a>
+                </li>
             </ul>
-
+            <a href="{{ route('change_language','en') }}">English</a>
+            <a href="{{ route('change_language','vi') }}">Vietnam</a>
+            Session lang: {{ \Session::get('language') }}
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
                 <!-- Navbar Search -->

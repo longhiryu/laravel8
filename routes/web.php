@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,5 +21,7 @@ Route::prefix('admin')->middleware(['auth:sanctum', 'verified'])->group(function
     Route::get('/dashboard', function () {
         return view('backend.layouts.main');
     });
+
+    Route::get('/change-language/{lang}',[DashboardController::class,'language'])->name('change_language');
 });
 
